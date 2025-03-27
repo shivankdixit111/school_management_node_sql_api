@@ -9,12 +9,10 @@ app.use(express.json())
 app.use("/", schoolRouter)
  
 
-db
-.query('select 1')
-.then(()=> console.log('connected to db'))
+db.query('select 1').then(()=> console.log('connected to db'))
 
 app.get('/', (req, res)=>{
-   return res.send('Basic Setup successful')
+   return res.send('Welcome to the webiste School Management')
 })
 
 app.listen(process.env.PORT, ()=>{
